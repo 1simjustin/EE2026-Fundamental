@@ -159,14 +159,14 @@ module count_pass(
                                 2 : an_status <= 0;
                             endcase
                         end
-                    else begin
-                        led_control[2:0] = 3'b111;
-                        // reset clock and status
-                        TIME_COUNT = 1;
-                        blink_status = 0;
-                    end
-                end                
-            endcase
+                        else begin
+                            led_control[2:0] = 3'b111;
+                            // reset clock and status
+                            TIME_COUNT = 1;
+                            blink_status = 0;
+                        end
+                    end                
+                endcase
             end
         end
         
